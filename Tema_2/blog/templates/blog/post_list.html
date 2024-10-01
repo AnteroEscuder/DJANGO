@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            mi blog
+        </title>
+    </head>
+
+        <body>
+            <p> hola</p>
+            <p> funciona </p>
+
+            {% for post in post_mostrar %}
+            <article>
+                <time> published: {{ post.published.date }} </time>
+                <h2> <a href=""> {{ post.title }} </a> </h2>
+                <p> {{ post.text |linebreaksbr }} </p>
+            </article>
+            {%endfor%}
+        </body>
+    
+</html>
